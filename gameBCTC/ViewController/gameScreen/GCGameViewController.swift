@@ -172,7 +172,7 @@ class GCGameViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        self.lblResult.text = "User: " + "\(self.moneyForUser)".formatMoney()
+        self.lblResult.text = "User: " + "\(self.moneyForUser)".formatMoney() + "$"
         self.callApi {
           self.directionWebview()
         }
@@ -287,7 +287,7 @@ class GCGameViewController: UIViewController {
                         
                     }
                     self.moneyForUser = kq + self.moneyForUser
-                    self.lblResult.text =  "User: " + "\(self.moneyForUser)".formatMoney()
+                    self.lblResult.text =  "User: " + "\(self.moneyForUser)".formatMoney() + "$"
                     
                     self.btnSelectBau.setTitle("", for: .normal)
                     self.btnSelectCua.setTitle("", for: .normal)
@@ -314,6 +314,10 @@ class GCGameViewController: UIViewController {
         
     }
     
+    @IBAction func ClickPodToView(_ sender: Any) {
+    
+        self.navigationController?.popViewController(animated: true)
+    }
     
     @IBAction func btnPow(_ sender: Any) {
 
@@ -368,7 +372,7 @@ class GCGameViewController: UIViewController {
     
     func setMoneyForRs()  {
             self.moneyForUser = self.moneyForUser - self.menhGia
-            self.lblResult.text = "User: " + "\(self.moneyForUser)".formatMoney()
+            self.lblResult.text = "User: " + "\(self.moneyForUser)".formatMoney() + "$"
     }
     
     @IBAction func btnSelectBau(_ sender: Any) {

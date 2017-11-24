@@ -26,7 +26,7 @@ class MenuViewController: UIViewController {
         btnranking.setTitle(NSLocalizedString("titlebtnRanking", comment:""), for: .normal)
         
        
-        
+        self.navigationController?.isNavigationBarHidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,16 +36,16 @@ class MenuViewController: UIViewController {
     
     @IBAction func clickPlay(_ sender: Any) {
         let viewVc = GCGameViewController()
-        self.present(viewVc, animated: true) { 
-            
-        }
+        self.navigationController?.pushViewController(viewVc, animated: true)
     }
 
     @IBAction func ClickRanking(_ sender: Any) {
         self.showAlerView(title: "", message: NSLocalizedString("titlebtnDPT", comment:""))
     }
     @IBAction func clickHelp(_ sender: Any) {
-                self.showAlerView(title: "", message: NSLocalizedString("titlebtnDPT", comment:""))
+        let viewRootView = AVTutorialViewController()
+        self.present(viewRootView, animated: true, completion: nil)
+
     }
 
     func showAlerView(title:String , message:String )  {

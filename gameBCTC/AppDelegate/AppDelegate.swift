@@ -21,6 +21,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, JPUSHRegisterDelegate {
     var window: UIWindow?
     
     
+    var blockFinishRegisToken:(()->Void)?
+    struct Static {
+        static var instance: AppDelegate?
+    }
+    class var ShareInstance: AppDelegate {
+        if Static.instance == nil {
+            Static.instance = AppDelegate()
+        }
+        return Static.instance!
+    }
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         //    let entity = JPUSHRegisterEntity()
         
@@ -50,8 +62,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, JPUSHRegisterDelegate {
         JPUSHService.setup(withOption: launchOptions, appKey: appKey, channel: channel, apsForProduction: isProduction)
         
 
-       let viewRootView = MenuViewController()
-        window?.rootViewController = viewRootView
+        let isFirtLogin = UserDefaults.bool(forKey: "isFirtKey")
+        
+        if !isFirtLogin {
+            //UserDefaults.set(true, forKey: "isFirtKey")
+            let viewRootView = AVTutorialViewController()
+            
+            window?.rootViewController = viewRootView
+            
+        } else {
+            let viewRootView = MenuViewController()
+            let navVC = UINavigationController(rootViewController: viewRootView)
+            window?.rootViewController = navVC
+        }
+        
+
         
         return true
     }
@@ -110,7 +135,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, JPUSHRegisterDelegate {
     func application(_ application: UIApplication,
                      didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         print("get the deviceToken  \(deviceToken)")
-        
+        if let block = blockFinishRegisToken {
+            block()
+        }
        self.inputView?.makeToast("aaaaaa")
         
         NotificationCenter.default.post(name: Notification.Name(rawValue: "DidRegisterRemoteNotification"), object: deviceToken)

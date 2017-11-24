@@ -5,10 +5,10 @@
   Created by Bui Giang on 11/17/17.
   Copyright © 2017 Bui Van Giang. All rights reserved.
 */
-"titleMessage" = "Thông báo";
-"messageErrorMoney" = "Không đủ tiền !";
+"titleMessage" = "Notification";
+"messageErrorMoney" = "Not enough money !";
 "titleButtonOk" = "Ok";
-"titlebtnPlay" = "Chơi luôn";
-"titlebtnHelp" = "Trợ giúp";
-"titlebtnRanking" = "Xếp hạng";
-"titlebtnDPT" = "Đang phát triển";
+"titlebtnPlay" = "Play";
+"titlebtnHelp" = "Help";
+"titlebtnRanking" = "Ranking";
+"titlebtnDPT" = "Coming soon";
