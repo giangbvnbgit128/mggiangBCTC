@@ -9,6 +9,8 @@
 import UIKit
 import Darwin
 import Alamofire
+import RealmSwift
+import Realm
 
 class GCGameViewController: UIViewController {
 
@@ -72,6 +74,7 @@ class GCGameViewController: UIViewController {
     @IBOutlet weak var imageResult3: UIImageView!
     
     var timerSchedule: Timer = Timer()
+    var maxScore:Int = 100000
     
     var directionModel:Direction = Direction()
     
@@ -79,6 +82,7 @@ class GCGameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.isNavigationBarHidden = true
         arrayItemImage.append(imgGame1)
         arrayItemImage.append(imageGame2)
         arrayItemImage.append(imageGame3)
@@ -171,6 +175,11 @@ class GCGameViewController: UIViewController {
         let moneyUserOld = UserDefaults.integer(forKey: "UserInfor")
         if moneyUserOld != 0 {
             self.moneyForUser = moneyUserOld
+            
+            let maxMoney = UserDefaults.integer(forKey: "maxScore")
+            if maxMoney != 0 {
+                self.maxScore = maxMoney
+            }
         }
         
     }
@@ -267,24 +276,46 @@ class GCGameViewController: UIViewController {
                 } else {
                     var kq:Int = 0//self.moneyForUser self.lifeOne.item self.lifeThree.item
                     for i in  0..<self.arrayMoneyCuoc.count {
-                        if self.arrayMoneyCuoc[i].item == .LON {
+                        if self.arrayMoneyCuoc[i].item == self.lifeOne.item {
                             kq = kq + self.arrayMoneyCuoc[i].money*2
                         }
                         if self.arrayMoneyCuoc[i].item == self.lifeTwo.item {
                             kq = kq + self.arrayMoneyCuoc[i].money*2
                         }
-                        if self.arrayMoneyCuoc[i].item == .LON {
+                        if self.arrayMoneyCuoc[i].item == self.lifeThree.item {
                             kq = kq + self.arrayMoneyCuoc[i].money*2
                         }
                     }
                     self.moneyForUser = kq + self.moneyForUser
                     self.lblResult.text =  "User: " + "\(self.moneyForUser)".formatMoney() + "$"
                     UserDefaults.set(self.moneyForUser, forKey: "UserInfor")
-                    UserDefaults.synchronize()
+                    // tinh max 1 lan
                     
-                    if self.moneyForUser == 0 {
+                    if self.moneyForUser > self.maxScore {
                         
+                        self.maxScore = self.moneyForUser
+                        UserDefaults.set(self.maxScore, forKey: "maxScore")
+                    }
+                    UserDefaults.synchronize()
+                    if self.moneyForUser == 0 {
+                        // so sanh roi save data no vao .// minh chi co 1 mang 10 phan tu
                         self.showAlerSuccess(message: NSLocalizedString("titleForUserLost", comment: ""), title: "", buttonTitle: NSLocalizedString("titleButtonOk", comment: ""), completed: {
+                            let userMax = UserInforOld()
+                            
+                            let date = Date()
+                            let formatter = DateFormatter()
+                            formatter.dateFormat = DataConfig.DATEFORMAT
+                            let result = formatter.string(from: date)
+                            
+                            userMax.date = "\(result)"
+                            userMax.money = self.maxScore
+                            
+                            let realm = try! Realm()
+                        
+                            try! realm.write {
+                                realm.add(userMax)
+                            }
+                            
                             self.navigationController?.popViewController(animated: true)
                         })
                     }

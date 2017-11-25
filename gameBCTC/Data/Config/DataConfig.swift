@@ -16,5 +16,6 @@ class DataConfig {
     static let APHASELECT:CGFloat = 0.5
     static let ANPHAUNSELECT:CGFloat = 0.3
     static let COLOUNSELECT:UIColor = UIColor.darkGray
+    static let DATEFORMAT:String = "YYYY.MM.dd HH:mm"
     
 }

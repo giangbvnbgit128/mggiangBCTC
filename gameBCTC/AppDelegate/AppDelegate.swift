@@ -70,22 +70,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, JPUSHRegisterDelegate {
         if !isFirtLogin {
             //UserDefaults.set(true, forKey: "isFirtKey")
             
-            var rankings:String = "00:00:00 00:00 + 0|00:00:00 00:00 + 0|00:00:00 00:00 + 0|00:00:00 00:00 + 0|00:00:00 00:00 + 0|00:00:00 00:00 + 0|00:00:00 00:00 + 0|00:00:00 00:00 + 0|00:00:00 00:00 + 0|00:00:00 00:00 + 0"
-            var arrayRankings:[String] = []
-            for i in 0..<10
-            {
-                
-                if i/2 == 0 {
-                    
-                    rankings.append("00:00:00 00:00")
-                } else {
-                    
-                    rankings.append("0")
-                }
-            }
             
-            UserDefaults.setValue(rankings, forKey: "LISTRANKING")
-            UserDefaults.synchronize()
             let viewRootView = AVTutorialViewController()
             window?.rootViewController = viewRootView
             

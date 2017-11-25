@@ -21,6 +21,10 @@
 		531FB2131FBB2F5D004406BB /* AVBaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531FB2111FBB2F5D004406BB /* AVBaseRouter.swift */; };
 		531FB2141FBB2F5D004406BB /* AVLoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531FB2121FBB2F5D004406BB /* AVLoginRouter.swift */; };
 		531FB2161FBB6030004406BB /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531FB2151FBB6030004406BB /* Direction.swift */; };
+		533255451FC9E7BF008D55DB /* RanKingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533255431FC9E7BF008D55DB /* RanKingViewController.swift */; };
+		533255461FC9E7BF008D55DB /* RanKingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 533255441FC9E7BF008D55DB /* RanKingViewController.xib */; };
+		533255491FC9E915008D55DB /* RankingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533255471FC9E915008D55DB /* RankingTableViewCell.swift */; };
+		5332554A1FC9E915008D55DB /* RankingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 533255481FC9E915008D55DB /* RankingTableViewCell.xib */; };
 		537F5F591FB7045C00E4E98C /* MoneyCuoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537F5F581FB7045C00E4E98C /* MoneyCuoc.swift */; };
 		537F5F5B1FB7606E00E4E98C /* AroundCycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537F5F5A1FB7606E00E4E98C /* AroundCycleModel.swift */; };
 		5399F1A41FC88F1100FDC73E /* UserInforOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5399F1A31FC88F1100FDC73E /* UserInforOld.swift */; };
@@ -109,6 +113,10 @@
 		531FB2111FBB2F5D004406BB /* AVBaseRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVBaseRouter.swift; sourceTree = "<group>"; };
 		531FB2121FBB2F5D004406BB /* AVLoginRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVLoginRouter.swift; sourceTree = "<group>"; };
 		531FB2151FBB6030004406BB /* Direction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
+		533255431FC9E7BF008D55DB /* RanKingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RanKingViewController.swift; sourceTree = "<group>"; };
+		533255441FC9E7BF008D55DB /* RanKingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RanKingViewController.xib; sourceTree = "<group>"; };
+		533255471FC9E915008D55DB /* RankingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingTableViewCell.swift; sourceTree = "<group>"; };
+		533255481FC9E915008D55DB /* RankingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingTableViewCell.xib; sourceTree = "<group>"; };
 		537F5F571FB703F100E4E98C /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Base; path = gameBCTC/Base.lproj/User.swift; sourceTree = SOURCE_ROOT; };
 		537F5F581FB7045C00E4E98C /* MoneyCuoc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoneyCuoc.swift; path = gameBCTC/MoneyCuoc.swift; sourceTree = SOURCE_ROOT; };
 		537F5F5A1FB7606E00E4E98C /* AroundCycleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AroundCycleModel.swift; sourceTree = "<group>"; };
@@ -283,6 +291,7 @@
 		4B582F2E1FB552380078C63B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				533255421FC9E7AD008D55DB /* Ranking */,
 				53D8069D1FBE7CF400077EB2 /* WebController */,
 				4B582F2F1FB552380078C63B /* gameScreen */,
 				4B582F301FB552380078C63B /* MenuScreen */,
@@ -317,6 +326,17 @@
 			);
 			name = JPush;
 			path = Pods/JPush;
+			sourceTree = "<group>";
+		};
+		533255421FC9E7AD008D55DB /* Ranking */ = {
+			isa = PBXGroup;
+			children = (
+				533255431FC9E7BF008D55DB /* RanKingViewController.swift */,
+				533255441FC9E7BF008D55DB /* RanKingViewController.xib */,
+				533255471FC9E915008D55DB /* RankingTableViewCell.swift */,
+				533255481FC9E915008D55DB /* RankingTableViewCell.xib */,
+			);
+			path = Ranking;
 			sourceTree = "<group>";
 		};
 		537F5F551FB7038200E4E98C /* Model */ = {
@@ -535,6 +555,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5332554A1FC9E915008D55DB /* RankingTableViewCell.xib in Resources */,
 				53D806901FBE191E00077EB2 /* Localizable.strings in Resources */,
 				53D8069C1FBE245400077EB2 /* MenuViewController.xib in Resources */,
 				4B582F341FB552500078C63B /* GCGameViewController.xib in Resources */,
@@ -542,6 +563,7 @@
 				4B582F081FB551E70078C63B /* LaunchScreen.storyboard in Resources */,
 				4B582F051FB551E70078C63B /* Assets.xcassets in Resources */,
 				53BE12561FC5C3330054EF5C /* AVTutorialCollectionViewCell.xib in Resources */,
+				533255461FC9E7BF008D55DB /* RanKingViewController.xib in Resources */,
 				53BE12571FC5C3330054EF5C /* AVTutorialViewController.xib in Resources */,
 				4B582F031FB551E70078C63B /* Main.storyboard in Resources */,
 			);
@@ -605,11 +627,15 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-gameBCTC/Pods-gameBCTC-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/TSToast/TSToast.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TSToast.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -626,6 +652,7 @@
 			files = (
 				531FB2131FBB2F5D004406BB /* AVBaseRouter.swift in Sources */,
 				4B582F331FB552500078C63B /* GCGameViewController.swift in Sources */,
+				533255491FC9E915008D55DB /* RankingTableViewCell.swift in Sources */,
 				531FB2141FBB2F5D004406BB /* AVLoginRouter.swift in Sources */,
 				53BE12581FC5C3330054EF5C /* AVTutorialViewController.swift in Sources */,
 				53BE128D1FC5C3AD0054EF5C /* Double.swift in Sources */,
@@ -637,6 +664,7 @@
 				53BE12811FC5C3AD0054EF5C /* Int.swift in Sources */,
 				53BE12801FC5C3AD0054EF5C /* UICollectionView.swift in Sources */,
 				53D8069B1FBE245400077EB2 /* MenuViewController.swift in Sources */,
+				533255451FC9E7BF008D55DB /* RanKingViewController.swift in Sources */,
 				53BE12921FC5C3AD0054EF5C /* UINavigationController.swift in Sources */,
 				53BE12851FC5C3AD0054EF5C /* Dictionary.swift in Sources */,
 				5399F1A41FC88F1100FDC73E /* UserInforOld.swift in Sources */,

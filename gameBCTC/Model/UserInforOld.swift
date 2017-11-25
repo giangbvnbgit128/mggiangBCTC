@@ -6,15 +6,11 @@
 //  Copyright © 2017 Bui Van Giang. All rights reserved.
 //
 
-import Foundation
-class UserInforOld {
-    var date:String = "00:00:00 00:00"
-    var money:Int = 0
-    init() {
-        
-    }
-    init(date:String, money:Int) {
-        self.date = date
-        self.money = money
-    }
+import RealmSwift
+import Realm
+
+class UserInforOld:Object {
+    dynamic var date:String = "00:00:00 00:00"
+    dynamic var money:Int = 0
+    
 }

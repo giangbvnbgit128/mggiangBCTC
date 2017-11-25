@@ -28,6 +28,10 @@ class MenuViewController: UIViewController {
        
         self.navigationController?.isNavigationBarHidden = true
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.isNavigationBarHidden = true
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -40,7 +44,10 @@ class MenuViewController: UIViewController {
     }
 
     @IBAction func ClickRanking(_ sender: Any) {
-        self.showAlerView(title: "", message: NSLocalizedString("titlebtnDPT", comment:""))
+        
+        let viewVc = RanKingViewController()
+        self.navigationController?.pushViewController(viewVc, animated: true)
+//        self.showAlerView(title: "", message: NSLocalizedString("titlebtnDPT", comment:""))
     }
     @IBAction func clickHelp(_ sender: Any) {
         let viewRootView = AVTutorialViewController()
