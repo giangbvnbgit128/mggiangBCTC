@@ -25,6 +25,8 @@
 		533255461FC9E7BF008D55DB /* RanKingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 533255441FC9E7BF008D55DB /* RanKingViewController.xib */; };
 		533255491FC9E915008D55DB /* RankingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533255471FC9E915008D55DB /* RankingTableViewCell.swift */; };
 		5332554A1FC9E915008D55DB /* RankingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 533255481FC9E915008D55DB /* RankingTableViewCell.xib */; };
+		5332554B1FC9F764008D55DB /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5332554C1FC9F764008D55DB /* RealmSwift.framework */; };
+		5332554D1FC9F768008D55DB /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5332554E1FC9F768008D55DB /* Realm.framework */; };
 		537F5F591FB7045C00E4E98C /* MoneyCuoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537F5F581FB7045C00E4E98C /* MoneyCuoc.swift */; };
 		537F5F5B1FB7606E00E4E98C /* AroundCycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537F5F5A1FB7606E00E4E98C /* AroundCycleModel.swift */; };
 		5399F1A41FC88F1100FDC73E /* UserInforOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5399F1A31FC88F1100FDC73E /* UserInforOld.swift */; };
@@ -117,6 +119,8 @@
 		533255441FC9E7BF008D55DB /* RanKingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RanKingViewController.xib; sourceTree = "<group>"; };
 		533255471FC9E915008D55DB /* RankingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingTableViewCell.swift; sourceTree = "<group>"; };
 		533255481FC9E915008D55DB /* RankingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingTableViewCell.xib; sourceTree = "<group>"; };
+		5332554C1FC9F764008D55DB /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5332554E1FC9F768008D55DB /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		537F5F571FB703F100E4E98C /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Base; path = gameBCTC/Base.lproj/User.swift; sourceTree = SOURCE_ROOT; };
 		537F5F581FB7045C00E4E98C /* MoneyCuoc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoneyCuoc.swift; path = gameBCTC/MoneyCuoc.swift; sourceTree = SOURCE_ROOT; };
 		537F5F5A1FB7606E00E4E98C /* AroundCycleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AroundCycleModel.swift; sourceTree = "<group>"; };
@@ -177,6 +181,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5332554D1FC9F768008D55DB /* Realm.framework in Frameworks */,
+				5332554B1FC9F764008D55DB /* RealmSwift.framework in Frameworks */,
 				53BE124E1FC58C1F0054EF5C /* TSToast.framework in Frameworks */,
 				322894466FCD6A576559D0AF /* Pods_gameBCTC.framework in Frameworks */,
 			);
@@ -427,6 +433,8 @@
 		7804A79394B7EF94CC9D298D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5332554E1FC9F768008D55DB /* Realm.framework */,
+				5332554C1FC9F764008D55DB /* RealmSwift.framework */,
 				53BE124D1FC58C1F0054EF5C /* TSToast.framework */,
 				530A38001FC515C600F5FA2B /* JPush */,
 				589678AD70F1445B998B667E /* Pods_gameBCTC.framework */,
