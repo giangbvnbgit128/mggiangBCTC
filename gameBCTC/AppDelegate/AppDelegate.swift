@@ -61,13 +61,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate, JPUSHRegisterDelegate {
         
         JPUSHService.setup(withOption: launchOptions, appKey: appKey, channel: channel, apsForProduction: isProduction)
         
+        
+        let notificationSettings = UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil )
+        UIApplication.shared.registerUserNotificationSettings(notificationSettings)
 
         let isFirtLogin = UserDefaults.bool(forKey: "isFirtKey")
         
         if !isFirtLogin {
             //UserDefaults.set(true, forKey: "isFirtKey")
-            let viewRootView = AVTutorialViewController()
             
+            var rankings:String = "00:00:00 00:00 + 0|00:00:00 00:00 + 0|00:00:00 00:00 + 0|00:00:00 00:00 + 0|00:00:00 00:00 + 0|00:00:00 00:00 + 0|00:00:00 00:00 + 0|00:00:00 00:00 + 0|00:00:00 00:00 + 0|00:00:00 00:00 + 0"
+            var arrayRankings:[String] = []
+            for i in 0..<10
+            {
+                
+                if i/2 == 0 {
+                    
+                    rankings.append("00:00:00 00:00")
+                } else {
+                    
+                    rankings.append("0")
+                }
+            }
+            
+            UserDefaults.setValue(rankings, forKey: "LISTRANKING")
+            UserDefaults.synchronize()
+            let viewRootView = AVTutorialViewController()
             window?.rootViewController = viewRootView
             
         } else {
@@ -135,10 +154,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, JPUSHRegisterDelegate {
     func application(_ application: UIApplication,
                      didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         print("get the deviceToken  \(deviceToken)")
-        if let block = blockFinishRegisToken {
-            block()
-        }
-       self.inputView?.makeToast("aaaaaa")
+       
+//        self.showToast(message: "\(deviceToken)")
         
         NotificationCenter.default.post(name: Notification.Name(rawValue: "DidRegisterRemoteNotification"), object: deviceToken)
         JPUSHService.registerDeviceToken(deviceToken)
@@ -157,8 +174,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, JPUSHRegisterDelegate {
         //self.AlerNotification(userInfor: userInfo)
         
     }
-    
-
+    func showToast(message:String) {
+        let topWindow = UIWindow(frame: UIScreen.main.bounds)
+        topWindow.rootViewController = UIViewController()
+        topWindow.windowLevel = UIWindowLevelAlert + 1
+        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "confirm"), style: .cancel, handler: {(_ action: UIAlertAction) -> Void in
+            // continue your work
+            // important to hide the window after work completed.
+            // this also keeps a reference to the window until the action is invoked.
+            topWindow.isHidden = true
+        }))
+        topWindow.makeKeyAndVisible()
+        topWindow.rootViewController?.present(alert, animated: true, completion: { _ in })
+    }
     
     func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
         JPUSHService.showLocalNotification(atFront: notification, identifierKey: nil)

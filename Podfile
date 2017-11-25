@@ -5,6 +5,7 @@ target 'gameBCTC' do
     pod 'Alamofire', '~> 4.4'
     pod 'JPush'
     pod 'TSToast'
+    pod 'RealmSwift'
 end
 post_install do |installer|
     installer.pods_project.targets.each do |target|

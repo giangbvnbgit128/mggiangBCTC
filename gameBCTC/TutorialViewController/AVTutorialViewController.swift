@@ -27,10 +27,7 @@ class AVTutorialViewController: UIViewController {
         self.pageControl.currentPage = 0
         self.pageControl.numberOfPages = arrayImage.count
         navigationController?.navigationBar.isTranslucent = false
-        AppDelegate.ShareInstance.blockFinishRegisToken = {() in
-            // show button exit//
-            self.view.makeToast("Finsih Token")
-        }
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -52,6 +49,26 @@ class AVTutorialViewController: UIViewController {
             self.collectionView.contentOffset.x = self.collectionView.frame.width * CGFloat(self.pageControl.currentPage + 1)
             self.movePageControlWithScroll()
         } else {
+            
+//            let notification = UILocalNotification()
+//            notification.fireDate = NSDate(timeIntervalSinceNow: 20) as Date
+//            notification.alertBody = "Hey you! Yeah you! Swipe to unlock!"
+//            notification.alertAction = "be awesome!"
+//            notification.soundName = UILocalNotificationDefaultSoundName
+//            notification.userInfo = ["CustomField1": "w00t"]
+//            UIApplication.shared.scheduleLocalNotification(notification)
+//            
+//            
+//            guard let settings = UIApplication.shared.currentUserNotificationSettings else { return }
+//            
+//            if settings.types == .none {
+//                let ac = UIAlertController(title: "Can't schedule", message: "Either we don't have permission to schedule notifications, or we haven't asked yet.", preferredStyle: .alert)
+//                ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+//                present(ac, animated: true, completion: nil)
+//                return
+//            }
+            
+            
             let viewRootView = MenuViewController()
             let naVc = UINavigationController(rootViewController: viewRootView)
             UserDefaults.set(true, forKey: "isFirtKey")
@@ -110,7 +127,6 @@ extension AVTutorialViewController: UICollectionViewDelegateFlowLayout {
 extension AVTutorialViewController: UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print("====== socr=== \(scrollView.contentOffset.x/UIScreen.mainWidth)")
         movePageControlWithScroll()
     }
     
@@ -118,7 +134,6 @@ extension AVTutorialViewController: UIScrollViewDelegate {
         movePageControlWithScroll()
     }
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        print("====Scroll \(scrollView.contentOffset.x) prin y = \(self.collectionView.frame.width)")
     }
    
 }

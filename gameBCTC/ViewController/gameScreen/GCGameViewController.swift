@@ -167,6 +167,12 @@ class GCGameViewController: UIViewController {
         self.btnoutPow.layer.cornerRadius = self.btnoutPow.frame.width/2 * Ratio.heightIPhone6
         self.btnoutPow.layer.borderColor = UIColor.red.cgColor
         self.btnoutPow.backgroundColor = UIColor.yellow
+        
+        let moneyUserOld = UserDefaults.integer(forKey: "UserInfor")
+        if moneyUserOld != 0 {
+            self.moneyForUser = moneyUserOld
+        }
+        
     }
     
     
@@ -240,18 +246,7 @@ class GCGameViewController: UIViewController {
             default:
                 break
             }
-            
-            //switch self.countlifeCycle {
-            //case 3:
-          //      self.imageResult1.image = UIImage(named: imageName)
-            //case 6:
-           //     self.imageResult2.image = UIImage(named: imageName)
-            //case 9:
-             //   self.imageResult3.image = UIImage(named: imageName)
-            //default:
-              //  break
-                
-            //}
+
             
             UIView.animate(withDuration: 1, animations: {
                 self.arrayItemImage[self.index].backgroundColor = .blue
@@ -270,24 +265,29 @@ class GCGameViewController: UIViewController {
                                                               repeats: true)
                     
                 } else {
-                    // cau nhap ui va tinh tien 
-                    var kq:Int = 0//self.moneyForUser
-                    // co 3 so random  loai tu 0 -> 11
-                    // lan thu nhat
+                    var kq:Int = 0//self.moneyForUser self.lifeOne.item self.lifeThree.item
                     for i in  0..<self.arrayMoneyCuoc.count {
-                        if self.arrayMoneyCuoc[i].item == self.lifeOne.item {
+                        if self.arrayMoneyCuoc[i].item == .LON {
                             kq = kq + self.arrayMoneyCuoc[i].money*2
                         }
                         if self.arrayMoneyCuoc[i].item == self.lifeTwo.item {
                             kq = kq + self.arrayMoneyCuoc[i].money*2
                         }
-                        if self.arrayMoneyCuoc[i].item == self.lifeThree.item {
+                        if self.arrayMoneyCuoc[i].item == .LON {
                             kq = kq + self.arrayMoneyCuoc[i].money*2
                         }
-                        
                     }
                     self.moneyForUser = kq + self.moneyForUser
                     self.lblResult.text =  "User: " + "\(self.moneyForUser)".formatMoney() + "$"
+                    UserDefaults.set(self.moneyForUser, forKey: "UserInfor")
+                    UserDefaults.synchronize()
+                    
+                    if self.moneyForUser == 0 {
+                        
+                        self.showAlerSuccess(message: NSLocalizedString("titleForUserLost", comment: ""), title: "", buttonTitle: NSLocalizedString("titleButtonOk", comment: ""), completed: {
+                            self.navigationController?.popViewController(animated: true)
+                        })
+                    }
                     
                     self.btnSelectBau.setTitle("", for: .normal)
                     self.btnSelectCua.setTitle("", for: .normal)
@@ -457,6 +457,18 @@ class GCGameViewController: UIViewController {
     func showAlerView(title:String , message:String )  {
         let alerView = UIAlertView( title: title, message: message, delegate: self, cancelButtonTitle:  NSLocalizedString("titleButtonOk", comment: ""))
         alerView.show()
+    }
+    
+    func showAlerSuccess(message:String,title:String, buttonTitle: String, completed: @escaping() -> Void) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction( title: buttonTitle, style: .default, handler: { (complete) in
+            completed()
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+        
     }
     
     func setTien()  {

@@ -23,6 +23,7 @@
 		531FB2161FBB6030004406BB /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531FB2151FBB6030004406BB /* Direction.swift */; };
 		537F5F591FB7045C00E4E98C /* MoneyCuoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537F5F581FB7045C00E4E98C /* MoneyCuoc.swift */; };
 		537F5F5B1FB7606E00E4E98C /* AroundCycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537F5F5A1FB7606E00E4E98C /* AroundCycleModel.swift */; };
+		5399F1A41FC88F1100FDC73E /* UserInforOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5399F1A31FC88F1100FDC73E /* UserInforOld.swift */; };
 		53BE124E1FC58C1F0054EF5C /* TSToast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53BE124D1FC58C1F0054EF5C /* TSToast.framework */; };
 		53BE12551FC5C3330054EF5C /* AVTutorialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BE12511FC5C3330054EF5C /* AVTutorialCollectionViewCell.swift */; };
 		53BE12561FC5C3330054EF5C /* AVTutorialCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53BE12521FC5C3330054EF5C /* AVTutorialCollectionViewCell.xib */; };
@@ -111,6 +112,7 @@
 		537F5F571FB703F100E4E98C /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Base; path = gameBCTC/Base.lproj/User.swift; sourceTree = SOURCE_ROOT; };
 		537F5F581FB7045C00E4E98C /* MoneyCuoc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoneyCuoc.swift; path = gameBCTC/MoneyCuoc.swift; sourceTree = SOURCE_ROOT; };
 		537F5F5A1FB7606E00E4E98C /* AroundCycleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AroundCycleModel.swift; sourceTree = "<group>"; };
+		5399F1A31FC88F1100FDC73E /* UserInforOld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInforOld.swift; sourceTree = "<group>"; };
 		53A8BC6E1FBF941800E464BF /* gameBCTC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = gameBCTC.entitlements; sourceTree = "<group>"; };
 		53BE124D1FC58C1F0054EF5C /* TSToast.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TSToast.framework; path = "../../../Library/Developer/Xcode/DerivedData/gameBCTC-bwtasfoszmfeatbfuntkpuvlfinc/Build/Products/Debug-iphoneos/TSToast/TSToast.framework"; sourceTree = "<group>"; };
 		53BE12511FC5C3330054EF5C /* AVTutorialCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVTutorialCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 				537F5F581FB7045C00E4E98C /* MoneyCuoc.swift */,
 				537F5F5A1FB7606E00E4E98C /* AroundCycleModel.swift */,
 				531FB2151FBB6030004406BB /* Direction.swift */,
+				5399F1A31FC88F1100FDC73E /* UserInforOld.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -636,6 +639,7 @@
 				53D8069B1FBE245400077EB2 /* MenuViewController.swift in Sources */,
 				53BE12921FC5C3AD0054EF5C /* UINavigationController.swift in Sources */,
 				53BE12851FC5C3AD0054EF5C /* Dictionary.swift in Sources */,
+				5399F1A41FC88F1100FDC73E /* UserInforOld.swift in Sources */,
 				53BE127C1FC5C3AD0054EF5C /* UIColor.swift in Sources */,
 				53BE128C1FC5C3AD0054EF5C /* CGFloat.swift in Sources */,
 				53BE128F1FC5C3AD0054EF5C /* UILabel.swift in Sources */,
