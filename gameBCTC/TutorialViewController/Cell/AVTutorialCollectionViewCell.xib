@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="17B48" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,15 +18,15 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial0" translatesAutoresizingMaskIntoConstraints="NO" id="zT7-Jn-FuY">
-                        <rect key="frame" x="20" y="20" width="335" height="627"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="zT7-Jn-FuY">
+                        <rect key="frame" x="20" y="30" width="335" height="617"/>
                     </imageView>
                 </subviews>
             </view>
             <color key="backgroundColor" red="0.64705882349999999" green="0.0" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="zT7-Jn-FuY" secondAttribute="trailing" constant="20" id="Ark-KN-Fng"/>
-                <constraint firstItem="zT7-Jn-FuY" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="20" id="d9s-K8-CGd"/>
+                <constraint firstItem="zT7-Jn-FuY" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="30" id="d9s-K8-CGd"/>
                 <constraint firstItem="zT7-Jn-FuY" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="euT-66-7zH"/>
                 <constraint firstAttribute="bottom" secondItem="zT7-Jn-FuY" secondAttribute="bottom" constant="20" id="f2g-6X-8ac"/>
             </constraints>
@@ -38,6 +38,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="tutorial0" width="84" height="150"/>
+        <image name="splash" width="540" height="960"/>
     </resources>
 </document>

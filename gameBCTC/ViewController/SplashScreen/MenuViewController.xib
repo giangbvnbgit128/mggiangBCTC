@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1611" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,14 +23,14 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu" translatesAutoresizingMaskIntoConstraints="NO" id="Wiw-Gk-NWw">
-                    <rect key="frame" x="0.0" y="16" width="375" height="651"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="Wiw-Gk-NWw">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mse-ps-HKH">
-                    <rect key="frame" x="62" y="204" width="250" height="260"/>
+                    <rect key="frame" x="62" y="201" width="250" height="266"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2AK-Yi-IKW">
-                            <rect key="frame" x="61" y="115" width="128" height="30"/>
+                            <rect key="frame" x="61" y="118" width="128" height="30"/>
                             <color key="backgroundColor" red="1" green="0.87763631190000002" blue="0.42294101220000002" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="128" id="2bM-HV-FB5"/>
@@ -41,15 +41,15 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAo-w5-c6M">
-                            <rect key="frame" x="61" y="161" width="128" height="30"/>
+                            <rect key="frame" x="61" y="164" width="128" height="30"/>
                             <color key="backgroundColor" red="1" green="0.87763631190000002" blue="0.42294101220000002" alpha="1" colorSpace="calibratedRGB"/>
                             <state key="normal" title="Trợ Giúp"/>
                             <connections>
                                 <action selector="clickHelp:" destination="-1" eventType="touchUpInside" id="VvQ-ZH-GU4"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S4r-in-tQu">
-                            <rect key="frame" x="61" y="69" width="128" height="30"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S4r-in-tQu">
+                            <rect key="frame" x="61" y="72" width="128" height="30"/>
                             <color key="backgroundColor" red="1" green="0.87763631190000002" blue="0.42294101220000002" alpha="1" colorSpace="calibratedRGB"/>
                             <state key="normal" title="Chơi"/>
                             <connections>
@@ -74,7 +74,7 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="Wiw-Gk-NWw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="16" id="9Rb-r4-pz3"/>
+                <constraint firstItem="Wiw-Gk-NWw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="9Rb-r4-pz3"/>
                 <constraint firstItem="mse-ps-HKH" firstAttribute="height" secondItem="Wiw-Gk-NWw" secondAttribute="height" multiplier="4/10" id="AUD-NZ-HWg"/>
                 <constraint firstItem="mse-ps-HKH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Jil-LM-xDw"/>
                 <constraint firstItem="mse-ps-HKH" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="VaS-p7-PmS"/>
@@ -87,6 +87,6 @@
         </view>
     </objects>
     <resources>
-        <image name="menu" width="540" height="960"/>
+        <image name="splash" width="540" height="960"/>
     </resources>
 </document>
