@@ -73,7 +73,7 @@
                                         <action selector="ClickPodToView:" destination="-1" eventType="touchUpInside" id="jFm-Op-s81"/>
                                     </connections>
                                 </button>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User: 100.000&amp;" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLl-8P-iwc">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="s" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLl-8P-iwc">
                                     <rect key="frame" x="20" y="-0.5" width="345" height="54.5"/>
                                     <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                     <nil key="textColor"/>
@@ -404,7 +404,7 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5o-mH-bzd">
                                             <rect key="frame" x="0.0" y="0.0" width="125" height="43"/>
-                                            <state key="normal" title="20.000$">
+                                            <state key="normal" title="20.000 G">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
@@ -425,7 +425,7 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfj-hI-kO5">
                                             <rect key="frame" x="0.0" y="0.0" width="125" height="43"/>
-                                            <state key="normal" title="10.000$">
+                                            <state key="normal" title="10.000 G">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
@@ -446,7 +446,7 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WdR-cr-1Fb">
                                             <rect key="frame" x="0.0" y="0.0" width="125" height="43"/>
-                                            <state key="normal" title="50.000$">
+                                            <state key="normal" title="50.000 G">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
@@ -495,7 +495,6 @@
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E0v-p7-oKX">
                                                     <rect key="frame" x="1" y="1" width="124" height="85.5"/>
-                                                    <state key="normal" title="Bầu"/>
                                                     <connections>
                                                         <action selector="btnSelectBau:" destination="-1" eventType="touchUpInside" id="ToP-kT-qcE"/>
                                                     </connections>
@@ -548,7 +547,6 @@
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2s-r4-fcp">
                                                     <rect key="frame" x="1" y="1" width="123" height="85.5"/>
-                                                    <state key="normal" title="Tôm"/>
                                                     <connections>
                                                         <action selector="btnSelectTom:" destination="-1" eventType="touchUpInside" id="0kx-0s-g47"/>
                                                     </connections>
@@ -595,7 +593,6 @@
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dx8-4Z-WKI">
                                                     <rect key="frame" x="1" y="1" width="124" height="85"/>
-                                                    <state key="normal" title="Gà"/>
                                                     <connections>
                                                         <action selector="btnSelectGa:" destination="-1" eventType="touchUpInside" id="1Ol-hQ-y9h"/>
                                                     </connections>
@@ -625,7 +622,6 @@
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4t5-An-vBL">
                                                     <rect key="frame" x="1" y="1" width="124" height="85"/>
-                                                    <state key="normal" title="Chó"/>
                                                     <connections>
                                                         <action selector="btnSelectCho:" destination="-1" eventType="touchUpInside" id="ZhX-Vz-rQP"/>
                                                     </connections>
@@ -651,7 +647,6 @@
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A8Y-7o-Qsc">
                                                     <rect key="frame" x="1" y="1" width="123" height="85"/>
-                                                    <state key="normal" title="Lon"/>
                                                     <connections>
                                                         <action selector="btnSelectLon:" destination="-1" eventType="touchUpInside" id="sle-f0-ixY"/>
                                                     </connections>

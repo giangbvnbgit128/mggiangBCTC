@@ -187,7 +187,7 @@ class GCGameViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        self.lblResult.text = "User: " + "\(self.moneyForUser)".formatMoney() + "$"
+        self.lblResult.text = "User: " + "\(self.moneyForUser)".formatMoney() + " G"
         self.callApi {
           self.directionWebview()
         }
@@ -287,7 +287,7 @@ class GCGameViewController: UIViewController {
                         }
                     }
                     self.moneyForUser = kq + self.moneyForUser
-                    self.lblResult.text =  "User: " + "\(self.moneyForUser)".formatMoney() + "$"
+                    self.lblResult.text =  "User: " + "\(self.moneyForUser)".formatMoney() + " G"
                     UserDefaults.set(self.moneyForUser, forKey: "UserInfor")
                     // tinh max 1 lan
                     
@@ -403,7 +403,7 @@ class GCGameViewController: UIViewController {
     
     func setMoneyForRs()  {
             self.moneyForUser = self.moneyForUser - self.menhGia
-            self.lblResult.text = "User: " + "\(self.moneyForUser)".formatMoney() + "$"
+            self.lblResult.text = "User: " + "\(self.moneyForUser)".formatMoney() + " G"
     }
     
     @IBAction func btnSelectBau(_ sender: Any) {
@@ -533,12 +533,12 @@ class GCGameViewController: UIViewController {
             }
  
         }
-        btnSelectBau.setTitle("\(moneyBau)".formatMoney() + "$", for: .normal)
-        btnSelectCua.setTitle("\(moneyCua)".formatMoney() + "$", for: .normal)
-        btnSelectTom.setTitle("\(moneyTom)".formatMoney() + "$", for: .normal)
-        btnSelectGa.setTitle("\(moneyGa)".formatMoney() + "$", for: .normal)
-        btnSelectLon.setTitle("\(moneyLon)".formatMoney() + "$", for: .normal)
-        btnSelectCho.setTitle("\(moneyCho)".formatMoney()  + "$", for: .normal)
+        btnSelectBau.setTitle("\(moneyBau)".formatMoney() + " G", for: .normal)
+        btnSelectCua.setTitle("\(moneyCua)".formatMoney() + " G", for: .normal)
+        btnSelectTom.setTitle("\(moneyTom)".formatMoney() + " G", for: .normal)
+        btnSelectGa.setTitle("\(moneyGa)".formatMoney() + " G", for: .normal)
+        btnSelectLon.setTitle("\(moneyLon)".formatMoney() + " G", for: .normal)
+        btnSelectCho.setTitle("\(moneyCho)".formatMoney()  + " G", for: .normal)
         
     }
     

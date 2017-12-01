@@ -28,6 +28,9 @@ class AVTutorialViewController: UIViewController {
         self.pageControl.numberOfPages = arrayImage.count
         navigationController?.navigationBar.isTranslucent = false
         
+        self.btnBack.layer.cornerRadius = 5
+        self.btnNext.layer.cornerRadius = 5
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -49,26 +52,6 @@ class AVTutorialViewController: UIViewController {
             self.collectionView.contentOffset.x = self.collectionView.frame.width * CGFloat(self.pageControl.currentPage + 1)
             self.movePageControlWithScroll()
         } else {
-            
-//            let notification = UILocalNotification()
-//            notification.fireDate = NSDate(timeIntervalSinceNow: 20) as Date
-//            notification.alertBody = "Hey you! Yeah you! Swipe to unlock!"
-//            notification.alertAction = "be awesome!"
-//            notification.soundName = UILocalNotificationDefaultSoundName
-//            notification.userInfo = ["CustomField1": "w00t"]
-//            UIApplication.shared.scheduleLocalNotification(notification)
-//            
-//            
-//            guard let settings = UIApplication.shared.currentUserNotificationSettings else { return }
-//            
-//            if settings.types == .none {
-//                let ac = UIAlertController(title: "Can't schedule", message: "Either we don't have permission to schedule notifications, or we haven't asked yet.", preferredStyle: .alert)
-//                ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-//                present(ac, animated: true, completion: nil)
-//                return
-//            }
-            
-            
             let viewRootView = MenuViewController()
             let naVc = UINavigationController(rootViewController: viewRootView)
             UserDefaults.set(true, forKey: "isFirtKey")
