@@ -695,16 +695,30 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bNC-Jb-WIP" userLabel="ViewWeb">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="651"/>
                             <subviews>
                                 <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ssp-KJ-Zqu">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="651"/>
                                     <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </webView>
+                                <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jlc-W5-Mnc">
+                                    <rect key="frame" x="8" y="8" width="51" height="27"/>
+                                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="51" id="cGq-Hg-XVr"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <state key="normal" title="Close"/>
+                                    <connections>
+                                        <action selector="closeWebView:" destination="-1" eventType="touchUpInside" id="Ojs-qO-T8O"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="ssp-KJ-Zqu" secondAttribute="bottom" id="3ZE-3y-0UL"/>
+                                <constraint firstItem="Jlc-W5-Mnc" firstAttribute="top" secondItem="bNC-Jb-WIP" secondAttribute="top" constant="8" id="LoS-C0-3rV"/>
+                                <constraint firstItem="Jlc-W5-Mnc" firstAttribute="leading" secondItem="bNC-Jb-WIP" secondAttribute="leading" constant="8" id="TNz-xh-pYa"/>
                                 <constraint firstItem="ssp-KJ-Zqu" firstAttribute="top" secondItem="bNC-Jb-WIP" secondAttribute="top" id="u4i-ag-ysY"/>
                                 <constraint firstAttribute="trailing" secondItem="ssp-KJ-Zqu" secondAttribute="trailing" id="vbG-gm-ask"/>
                                 <constraint firstItem="ssp-KJ-Zqu" firstAttribute="leading" secondItem="bNC-Jb-WIP" secondAttribute="leading" id="ztN-I6-PvO"/>

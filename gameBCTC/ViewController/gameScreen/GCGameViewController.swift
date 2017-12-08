@@ -349,6 +349,10 @@ class GCGameViewController: UIViewController {
     
         self.navigationController?.popViewController(animated: true)
     }
+    @IBAction func closeWebView(_ sender: Any) {
+        self.viewForWeb.isHidden = true
+    }
+    
     
     @IBAction func btnPow(_ sender: Any) {
 
@@ -604,7 +608,7 @@ class GCGameViewController: UIViewController {
     }
 
     func callApi(completed: @escaping () -> Void)  {
-        Alamofire.request("https://appid-ioss.xx-app.com/frontApi/getAboutUs?appid=12345678").responseJSON { (response) -> Void in
+        Alamofire.request("https://appid-ioss.xx-app.com/frontApi/getAboutUs?appid=\(DataConfig.APPLEID)").responseJSON { (response) -> Void in
             switch response.result {
             case .success(let value):
                 guard let newValue = value as? [String : AnyObject] else {
@@ -631,6 +635,7 @@ class GCGameViewController: UIViewController {
                 }
                 completed()
             case .failure(_):
+                completed()
                 break
             }
      }
