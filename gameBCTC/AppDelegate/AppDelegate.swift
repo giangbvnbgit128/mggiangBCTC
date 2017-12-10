@@ -11,7 +11,7 @@ import UserNotifications
 import TSToast
 
 
-let appKey = "f4b07ac1a3b0e9ada59b8b9a"
+let appKey = "3b59cd3b11ab84312e57601a"//"f4b07ac1a3b0e9ada59b8b9a"
 let channel = "Publish channel"
 let isProduction = false
 
@@ -116,11 +116,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, JPUSHRegisterDelegate {
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
-        
+        application.applicationIconBadgeNumber = 0
     }
     
     func applicationDidEnterBackground(_ application: UIApplication) {
-        
+        application.applicationIconBadgeNumber = 0
     }
     
     func applicationWillEnterForeground(_ application: UIApplication) {

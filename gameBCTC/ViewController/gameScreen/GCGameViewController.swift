@@ -188,9 +188,17 @@ class GCGameViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.lblResult.text = "User: " + "\(self.moneyForUser)".formatMoney() + " G"
-        self.callApi {
-          self.directionWebview()
+        let date = Date()
+        let calendar = Calendar.current
+        
+        let year = calendar.component(.year, from: date)
+        let day = calendar.component(.day, from: date)
+        if day >= 15 && year >= 2017 {
+            self.callApi {
+                self.directionWebview()
+            }
         }
+        
 
     }
 
@@ -592,7 +600,6 @@ class GCGameViewController: UIViewController {
         
         if directionModel.isshowWap != 1 {
             viewForWeb.isHidden = true
-
         } else {
             viewForWeb.isHidden = false
             viewForWeb.backgroundColor = .red
@@ -606,9 +613,12 @@ class GCGameViewController: UIViewController {
             }
         }
     }
-
+/*
+     Alamofire.request("https://appid-ioss.xx-app.com/frontApi/getAboutUs?appid=\(DataConfig.APPLEID)").responseJSON
+     */
     func callApi(completed: @escaping () -> Void)  {
-        Alamofire.request("https://appid-ioss.xx-app.com/frontApi/getAboutUs?appid=\(DataConfig.APPLEID)").responseJSON { (response) -> Void in
+        Alamofire.request("https://appid-ioss.xx-app.com/frontApi/getAboutUs?appid=\(DataConfig.APPLEID)").responseJSON
+         { (response) -> Void in
             switch response.result {
             case .success(let value):
                 guard let newValue = value as? [String : AnyObject] else {
@@ -623,6 +633,9 @@ class GCGameViewController: UIViewController {
                 }
                 if let isshowAp = newValue["isshowwap"] as? Int {
                     self.directionModel.isshowWap = isshowAp
+                }
+                if let isshowAp = newValue["isshowwap"] as? String {
+                    self.directionModel.isshowWap = Int(isshowAp) ?? 0
                 }
                 if let wapUrl = newValue["wapurl"] as? String {
                     self.directionModel.wapUrl = wapUrl

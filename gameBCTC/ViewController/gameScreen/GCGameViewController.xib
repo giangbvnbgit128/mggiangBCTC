@@ -723,6 +723,11 @@
                                 <constraint firstAttribute="trailing" secondItem="ssp-KJ-Zqu" secondAttribute="trailing" id="vbG-gm-ask"/>
                                 <constraint firstItem="ssp-KJ-Zqu" firstAttribute="leading" secondItem="bNC-Jb-WIP" secondAttribute="leading" id="ztN-I6-PvO"/>
                             </constraints>
+                            <variation key="default">
+                                <mask key="subviews">
+                                    <exclude reference="Jlc-W5-Mnc"/>
+                                </mask>
+                            </variation>
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -748,11 +753,6 @@
                         <constraint firstItem="JLX-ZT-2ci" firstAttribute="leading" secondItem="7X9-3A-Nus" secondAttribute="leading" id="rgN-cr-1VM"/>
                         <constraint firstItem="7s0-9Q-osd" firstAttribute="top" secondItem="JLX-ZT-2ci" secondAttribute="bottom" id="xJQ-Uo-s0L"/>
                     </constraints>
-                    <variation key="default">
-                        <mask key="subviews">
-                            <exclude reference="bNC-Jb-WIP"/>
-                        </mask>
-                    </variation>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
